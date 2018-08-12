@@ -1,5 +1,7 @@
 package com.ivan.mall.mapper;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Select;
 
 import com.ivan.mall.pojo.Item;
@@ -12,6 +14,11 @@ import com.ivan.mall.pojo.Item;
 
 public interface ItemDao {
 
-	@Select("select * from tb_item where id = #{id}")
-	Item getItemById(long id);//id, item_name, item_price, item_description
+	//根据商品id查询商品信息
+	@Select("select id, name, price, description from ivanmall_item where id = #{id}")
+	Item getItemById(long id);
+
+	//查询所有商品信息--分页查询
+	@Select("select id, name, price, description from ivanmall_item")
+	List<Item> getItemList();
 }

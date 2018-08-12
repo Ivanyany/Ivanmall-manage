@@ -1,5 +1,7 @@
 package com.ivan.mall.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +25,12 @@ public class ItemServiceImpl implements ItemService {
 	@Override
 	public Item getItemById(long id) {
 		return itemDao.getItemById(id);
+	}
+
+	//查询所有商品信息--分页查询
+	@Override
+	public List<Item> getItemList() {
+		return itemDao.getItemList();
 	}
 	
 }

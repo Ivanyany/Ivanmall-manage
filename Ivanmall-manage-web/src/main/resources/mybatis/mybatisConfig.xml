@@ -9,6 +9,15 @@
 		<package name="com.ivan.mall.pojo"/>
 	</typeAliases>
 	
+	<!-- 配置pageHelper分页插件 -->
+	<plugins>
+		<plugin interceptor="com.github.pagehelper.PageInterceptor">
+			<!-- 配置分页合理化:不查询负数页 -->
+			<property name="reasonable" value="true"/>
+
+		</plugin>
+	</plugins>
+	
 	<!-- 注册mapper映射文件 -->
 	<mappers>
 		<package name="com.ivan.mall.mapper"/>

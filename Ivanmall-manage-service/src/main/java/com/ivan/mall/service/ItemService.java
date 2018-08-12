@@ -1,5 +1,7 @@
 package com.ivan.mall.service;
 
+import java.util.List;
+
 import com.ivan.mall.pojo.Item;
 
 /**
@@ -11,4 +13,7 @@ import com.ivan.mall.pojo.Item;
 public interface ItemService {
 	//根据商品id查询商品信息
 	Item getItemById(long id);
+
+	//查询所有商品信息--分页查询
+	List<Item> getItemList();
 }

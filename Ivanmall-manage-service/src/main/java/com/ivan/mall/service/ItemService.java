@@ -16,4 +16,13 @@ public interface ItemService {
 
 	//查询所有商品信息--分页查询
 	List<Item> getItemList();
+
+	//添加新增商品信息
+	void addItem(Item item);
+
+	//根据id删除Item
+	void deleteItem(Long id);
+
+	//编辑商品信息
+	void updateItem(Item item);
 }

@@ -24,5 +24,13 @@
 	<mvc:resources location="/WEB-INF/images/" mapping="/images/**"></mvc:resources>
 	<mvc:resources location="/WEB-INF/js/" mapping="/js/**"></mvc:resources>
 	<mvc:resources location="/WEB-INF/lay/" mapping="/lay/**"></mvc:resources>
+	
+	<!-- 文件上传 -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- 设置编码 -->
+		<property name="defaultEncoding" value="UTF-8"></property>
+		<!-- 设置文件上传最大值5MB=5*1024*1024 -->
+		<property name="maxUploadSize" value="5242880"></property>
+	</bean>
 
 </beans>

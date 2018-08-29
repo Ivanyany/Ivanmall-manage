@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Ivanmall后台管理</title>
+<title>消息管理</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 <body class="layui-layout-body">
@@ -19,7 +19,7 @@
   
   <div class="layui-body">
     <!-- 内容主体区域 -->
-    <div style="padding: 15px; text-align: center; font-size: 22px;margin-top: 10%">欢迎使用Ivanmall后台管理系统</div>
+    <div style="padding: 15px; text-align: center; font-size: 22px; margin-top: 10%; color:lightpink;">功能正在上线，敬请期待......</div>
   </div>
   
   <!-- 引入底部说明 -->

@@ -6,7 +6,7 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
 	<!-- 导入资源文件 -->
-	<context:property-placeholder location="classpath:resource/db.properties"/>
+	<context:property-placeholder location="classpath:resource/*.properties"/>
 	
 	<!-- 配置数据源 -->
 	<!-- 配置druid数据源 -->

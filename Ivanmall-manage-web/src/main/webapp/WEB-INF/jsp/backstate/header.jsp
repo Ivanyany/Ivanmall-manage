@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!-- 头部菜单 -->
@@ -9,7 +9,7 @@
   <ul class="layui-nav layui-layout-right">
     <li class="layui-nav-item">
       <a href="javascript:;">
-        <img src="<c:url value='/images/Ivan.jpg'/>" class="layui-nav-img">Ivan
+        <img src="http://106.14.124.124/images/Ivan.jpg" class="layui-nav-img">Ivan
       </a>
       <dl class="layui-nav-child">
         <dd><a href="">基本资料</a></dd>

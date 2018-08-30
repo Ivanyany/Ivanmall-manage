@@ -18,8 +18,8 @@
        <li class="layui-nav-item layui-nav-itemed">
          <a href="javascript:;">商品分类管理</a>
          <dl class="layui-nav-child">
-           <dd><a href="<c:url value='/item-add'/>">新增商品分类</a></dd>
-           <dd><a href="<c:url value='/item-list'/>">查询商品分类</a></dd>
+           <dd><a href="<c:url value='/category-add'/>">新增商品分类</a></dd>
+           <dd><a href="<c:url value='/category-list'/>">查询商品分类</a></dd>
          </dl>
        </li>
 	   <li class="layui-nav-item layui-nav-itemed">

@@ -1,6 +1,5 @@
 package com.ivan.mall.pojo;
 
-import java.util.Date;
 
 /**
  * 商品实体类

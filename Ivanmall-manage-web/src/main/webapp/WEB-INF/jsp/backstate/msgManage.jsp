@@ -19,7 +19,7 @@
   
   <div class="layui-body">
     <!-- 内容主体区域 -->
-    <div style="padding: 15px; text-align: center; font-size: 22px; margin-top: 10%; color:lightpink;">功能正在上线，敬请期待......</div>
+    <div style="padding: 15px; text-align: center; font-size: 22px; margin-top: 10%; color:lightgreen;">功能正在上线，敬请期待......</div>
   </div>
   
   <!-- 引入底部说明 -->

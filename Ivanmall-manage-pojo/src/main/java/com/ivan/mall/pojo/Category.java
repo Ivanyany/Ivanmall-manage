@@ -1,6 +1,5 @@
 package com.ivan.mall.pojo;
 
-import java.util.Date;
 
 /**
  * 商品类别实体类
@@ -12,8 +11,8 @@ public class Category {
 	
 	private Integer id;//分类id
 	private String name;//分类名称
-	private Date createTime;//创建时间
-	private Date lastChangeTime;//最后修改时间
+	private String createTime;//创建时间
+	private String lastChangeTime;//最后修改时间
 	private int deleteFlag;////删除标志:0表示已删除,1表示未删除
 
 	public Integer getId() {
@@ -29,16 +28,16 @@ public class Category {
 		this.name = name;
 	}
 	
-	public Date getCreateTime() {
+	public String getCreateTime() {
 		return createTime;
 	}
-	public void setCreateTime(Date createTime) {
+	public void setCreateTime(String createTime) {
 		this.createTime = createTime;
 	}
-	public Date getLastChangeTime() {
+	public String getLastChangeTime() {
 		return lastChangeTime;
 	}
-	public void setLastChangeTime(Date lastChangeTime) {
+	public void setLastChangeTime(String lastChangeTime) {
 		this.lastChangeTime = lastChangeTime;
 	}
 	public int getDeleteFlag() {

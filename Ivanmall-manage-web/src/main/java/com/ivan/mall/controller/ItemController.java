@@ -56,7 +56,7 @@ public class ItemController {
 //		PageHelper.startPage(page, limit);
 //		List<Item> itemList = itemService.getItemList();
 //		PageInfo pageInfo = new PageInfo(itemList);
-//		Message message = Message.success("分页查询成功");
+//		Message message = Message.success();
 //		message.setData(itemList);
 //		message.setCount(pageInfo.getTotal());
 //		return message;
@@ -112,7 +112,7 @@ public class ItemController {
 	//编辑商品
 	@RequestMapping("/editItem")
 	@ResponseBody
-	public Message editItem(Item item, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public Message editItem(Item item) {
 		//编辑商品信息
 		itemService.updateItem(item);
 		

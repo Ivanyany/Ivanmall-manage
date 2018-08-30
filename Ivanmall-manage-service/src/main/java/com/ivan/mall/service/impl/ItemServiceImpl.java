@@ -29,7 +29,7 @@ public class ItemServiceImpl implements ItemService {
 	@Autowired
 	private PictureService pictureService;
 	
-	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
 	//根据商品id查询商品信息
 	@Override
@@ -46,11 +46,11 @@ public class ItemServiceImpl implements ItemService {
 	//添加新增商品信息
 	@Override
 	public void addItem(Item item) {
-		Date now = new Date();
+		String now = sdf.format(new Date());
 		
-		item.setCreateTime(sdf.format(now));//创建时间
-		item.setLastChangeTime(sdf.format(now));//最后修改时间
-		item.setDeleteFlag(1);//删除标志
+		item.setCreateTime(now);//创建时间
+		item.setLastChangeTime(now);//最后修改时间
+		item.setDeleteFlag(1);//删除标志--初始化时未删除
 		itemDao.addItem(item);
 	}
 

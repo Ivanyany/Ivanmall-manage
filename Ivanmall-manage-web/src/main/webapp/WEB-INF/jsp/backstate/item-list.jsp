@@ -6,12 +6,11 @@
 <head>
 <meta name="renderer" content="webkit">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Ivanmall商品列表分页</title>
+<title>商品列表</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
-  
   <!-- 引入头部菜单 -->
   <c:import url='header.jsp'/>
   
@@ -24,8 +23,9 @@
  	<table id="itemTable" lay-filter="itemFilter"></table>
  	<!-- <div id="itemTable" lay-filter="itemFilter" ></div> -->
 
-  <!-- 引入底部说明 -->
-  <c:import url='footer.jsp'/>
+	<!-- 引入底部说明 -->
+	<c:import url='footer.jsp'/>
+  </div>
 </div>
 </body>
 <script type="text/html" id="barOp">
@@ -52,15 +52,15 @@ layui.use('table', function(){
 		    ,limits: [10, 15, 20]
 		    ,page: true //开启分页
 		    ,cols: [[
-		        {type:'checkbox'}
+		        {type:'checkbox', width:'4%'}
 		        //,{field:'id', width:80, title: 'ID', sort: true}
-		        ,{field:'name', width:120, title: '商品名称'}
-		        ,{field:'price', width:80, title: '商品价格', sort: true}
-		        ,{field:'pictureUrl', width:250, title: '图片路径'}
-		        ,{field:'description', width:250, title: '商品描述'}
-		        ,{field: 'createTime', width:120, title: '创建时间'}
-		        ,{field:'lastChangeTime', width:120, title: '最后更新时间'}
-		        ,{fixed: 'right', align:'center', width:150, title: '操作', toolbar: '#barOp'} //这里的toolbar值是模板元素的选择器
+		        ,{field:'name', width:'10%', title: '商品名称'}
+		        ,{field:'price', width:'10%', title: '商品价格', sort: true}
+		        ,{field:'pictureUrl', width:'22%', title: '图片路径'}
+		        ,{field:'description', width:'22%', title: '商品描述'}
+		        ,{field: 'createTime', width:'10%', title: '创建时间', sort: true}
+		        ,{field:'lastChangeTime', width:'10%', title: '最后更新时间', sort: true}
+		        ,{fixed: 'right', align:'center', width:'12%', title: '操作', toolbar: '#barOp'} //这里的toolbar值是模板元素的选择器
 		      ]]
 		  });
   }

@@ -93,7 +93,7 @@
 		//表单提交
 		$("#updateBtn").click(function(){
 			$.ajax({
-				url: "<c:url value='editItem'/>",
+				url: "<c:url value='/editItem'/>",
 				type: "POST",
 				data: $(".layui-form").serialize(),
 				success: function(data){

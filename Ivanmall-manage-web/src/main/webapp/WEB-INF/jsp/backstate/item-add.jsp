@@ -23,7 +23,7 @@
 				<div class="layui-form-item">
 					<label class="layui-form-label">商品名称</label>
 					<div class="layui-input-block">
-						<input type="text" name="name" required lay-verify="required"
+						<input type="text" name="name" lay-verify="required"
 							placeholder="输入商品名称" autocomplete="off" class="layui-input">
 					</div>
 				</div>
@@ -38,14 +38,14 @@
 				<div class="layui-form-item">
 					<label class="layui-form-label">商品价格</label>
 					<div class="layui-input-block">
-						<input type="text" name="price" required lay-verify="required"
+						<input type="text" name="price" lay-verify="required"
 							placeholder="输入商品价格" autocomplete="off" class="layui-input">
 					</div>
 				</div>
 				<div class="layui-upload">
                  <label class="layui-form-label">商品图片</label>
                  <div class="layui-upload layui-input-block">
-                     <input type="hidden" name="pictureUrl" value=""/>
+                     <input type="hidden" name="pictureUrl" lay-verify="required"/>
                      <button type="button" class="layui-btn layui-btn-primary" id="fileBtn"><i class="layui-icon">&#xe67c;</i>选择文件</button>
                      <button type="button" class="layui-btn" id="uploadBtn">开始上传</button>
                  </div>
@@ -54,7 +54,7 @@
 					<label class="layui-form-label">商品描述</label>
 					<div class="layui-input-block">
 						<!-- <input type="hidden" name="description" value=""/> -->
-						<textarea name="description" id="descriptionTxtArea" style="display: none;"></textarea>
+						<textarea name="description" id="descriptionTxtArea" lay-verify="required" style="display: none;"></textarea>
 					</div>
 				</div>
 				<div class="layui-form-item">

@@ -61,7 +61,7 @@ layui.use('table', function(){
 		        ,{field: 'createTime', width:'10%', title: '创建时间', sort: true}
 		        ,{field:'lastChangeTime', width:'10%', title: '最后更新时间', sort: true}
 		        ,{fixed: 'right', align:'center', width:'12%', title: '操作', toolbar: '#barOp'} //这里的toolbar值是模板元素的选择器
-		      ]]
+		    ]]
 		  });
   }
   

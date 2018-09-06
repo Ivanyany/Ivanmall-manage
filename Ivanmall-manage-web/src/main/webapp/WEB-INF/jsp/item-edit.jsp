@@ -70,9 +70,9 @@
 	  	    url:'/getCategoryList',
 	  	    dataType:'json',
 	  	    type:'post',
-	  	    success:function(data){
+	  	    success:function(message){
 	  	    	
-	  	    	$.each(data,function(index, item){
+	  	    	$.each(message.data,function(index, item){
 	  	    		$('#category').append(new Option(item.name,item.id));// 下拉菜单里添加元素
 	  	    	})
 				form.render();//下拉菜单渲染 把内容加载进去

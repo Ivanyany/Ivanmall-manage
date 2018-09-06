@@ -34,6 +34,10 @@
   			<configuration>
   				<port>8080</port>
   				<path>/</path>
+  				<!-- 热部署 -->
+  				<url>http://106.14.124.124:8080/manager/text</url>
+  				<username>tomcat</username>
+  				<password>tomcat</password>
   			</configuration>
   		</plugin>
   	</plugins>

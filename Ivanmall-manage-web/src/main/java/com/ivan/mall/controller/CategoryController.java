@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.ivan.mall.pojo.Category;
-import com.ivan.mall.pojo.Item;
 import com.ivan.mall.pojo.Message;
 import com.ivan.mall.service.CategoryService;
 
@@ -33,10 +32,19 @@ public class CategoryController {
 	@Autowired
 	private CategoryService categoryService;
 	
+	@ResponseBody
+	@RequestMapping("/getCategoryList")
+	public Message getCategoryList() {
+		List<Category> categoryList = categoryService.getCategoryList();
+		Message message = Message.build(200, "查询成功...");
+		message.setData(categoryList);
+		return message;
+	}
+	
 	//查询所有商品类别--分页查询
 	@ResponseBody
 	@RequestMapping("/category/list")
-	public Message getCategoryList(@RequestParam("page")Integer page, @RequestParam("limit")Integer limit) {
+	public Message getCategoryListByPage(@RequestParam("page")Integer page, @RequestParam("limit")Integer limit) {
 		
 		//page:页码--layui默认的参数
 		//limit:每页查询的记录数--layui默认的参数
@@ -44,7 +52,7 @@ public class CategoryController {
 		PageHelper.startPage(page, limit);
 		List<Category> categoryList = categoryService.getCategoryList();
 		PageInfo pageInfo = new PageInfo(categoryList);
-		Message message = Message.success();
+		Message message = Message.build(0, "查询成功...");
 		message.setData(categoryList);
 		message.setCount(pageInfo.getTotal());
 		return message;
@@ -67,10 +75,8 @@ public class CategoryController {
 	public Message deleteCategory(@PathVariable("id")Integer id) {
 		//删除Category
 		categoryService.deleteCategory(id);//根据id删除Category
-		Message message = new Message().success();
-		message.setMsg("删除成功...");
 		
-		return message;
+		return Message.build(200, "删除成功...");
 	}
 	
 	//编辑商品分类
@@ -80,8 +86,6 @@ public class CategoryController {
 		//编辑商品分类
 		categoryService.updateCategory(category);
 		
-		Message message = new Message().success();
-		
-		return message;
+		return Message.build(200, "编辑成功...");
 	}
 }

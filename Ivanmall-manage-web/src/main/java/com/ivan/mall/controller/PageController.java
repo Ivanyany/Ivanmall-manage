@@ -15,12 +15,12 @@ public class PageController {
 	//打开后台管理首页
 	@RequestMapping("/")
 	public String openIndex() {
-		return "backstate/index";
+		return "index";
 	}
 	
 	//展示后台其他页面
 	@RequestMapping("/{page}")
 	public String showPage(@PathVariable String page) {
-		return "backstate/" + page;
+		return page;
 	}
 }

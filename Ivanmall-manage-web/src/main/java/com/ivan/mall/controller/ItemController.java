@@ -41,7 +41,7 @@ public class ItemController {
 	public Message getItemById(@PathVariable("itemId")Long itemId) {
 		Item item = itemService.getItemById(itemId);
 		
-		Message message = new Message().success();
+		Message message = Message.build(200, "查询成功...");
 		message.setData(item);
 		return message;
 	}
@@ -79,7 +79,7 @@ public class ItemController {
 		PageInfo pageInfo = new PageInfo(itemList);
 		
 		//返回操作信息对象
-		Message message = Message.success();
+		Message message = Message.build(0, "查询成功...");
 		//设置操作信息对象信息
 		message.setData(itemList);
 		message.setCount(pageInfo.getTotal());
@@ -103,10 +103,8 @@ public class ItemController {
 	public Message deleteItem(@PathVariable("id")Long id) {
 		//删除Item
 		itemService.deleteItem(id);//根据id删除Item
-		Message message = new Message().success();
-		message.setMsg("删除成功...");
 		
-		return message;
+		return Message.build(200, "删除成功...");
 	}
 	
 	//编辑商品
@@ -116,8 +114,6 @@ public class ItemController {
 		//编辑商品信息
 		itemService.updateItem(item);
 		
-		Message message = new Message().success();
-		
-		return message;
+		return Message.build(200, "编辑成功...");
 	}
 }

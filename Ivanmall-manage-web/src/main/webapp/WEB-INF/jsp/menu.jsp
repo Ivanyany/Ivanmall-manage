@@ -25,8 +25,8 @@
 	   <li class="layui-nav-item layui-nav-itemed">
          <a href="javascript:;">用户管理</a>
          <dl class="layui-nav-child">
-           <dd><a href="javascript:;">管理员用户管理</a></dd>
-           <dd><a href="javascript:;">普通用户管理</a></dd>
+           <dd><a href="<c:url value='/msgManage'/>">管理员用户管理</a></dd>
+           <dd><a href="<c:url value='/msgManage'/>">普通用户管理</a></dd>
          </dl>
        </li>
        <li class="layui-nav-item layui-nav-itemed">

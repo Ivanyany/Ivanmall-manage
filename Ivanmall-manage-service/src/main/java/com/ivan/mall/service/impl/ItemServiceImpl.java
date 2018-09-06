@@ -61,8 +61,12 @@ public class ItemServiceImpl implements ItemService {
 		
 		//根据商品id获取图片远程地址
 		String picUrl = itemDao.getPicUrl(id);
-		//删除ftp服务器中的图片
-		pictureService.deleteFile(picUrl);
+		//图片服务器上不存在该图片
+		if (picUrl != null && picUrl != "") {
+			//删除ftp服务器中的图片
+			pictureService.deleteFile(picUrl);
+		}
+		
 		//删除数据库中的相应信息--假删除(deleteFlag = 0, 图片picURL置为null)
 		itemDao.deleteImage(id);
 	}
